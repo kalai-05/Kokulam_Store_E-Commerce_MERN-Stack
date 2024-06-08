@@ -1,0 +1,42 @@
+.main-wish h1 {
+  font-size: 40px;
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Aclonica", sans-serif;
+}
+
+.wishitems {
+  width: 220px;
+  border: 0.1px solid black;
+  border-radius: 30px;
+  background: white;
+}
+.under-img {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.wishitems h2 {
+  padding-left: 20px;
+}
+.wishitems-main {
+  margin: 60px 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 60px;
+  gap: 20px;
+}
+.wishitems-formate {
+  font-size: 17px;
+  font-weight: 600;
+}
+.wishicon-product-icon {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.wishitems-remove-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}

@@ -10,7 +10,7 @@ const Offer = () => {
   const [all_product, setAllProduct] = useState([]);
 
   const fetchOff = async () => {
-    await fetch("http://localhost:4000/allOffer")
+    await fetch("https://kokulam-store-e-commerce-backend.onrender.com/allOffer")
       .then((res) => res.json())
       .then((data) => {
         setAllProduct(data);

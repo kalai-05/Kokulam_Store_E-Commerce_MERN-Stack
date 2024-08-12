@@ -23,12 +23,12 @@ const ShopContextProvider = (props) => {
   const [wishItems, setWishItems] = useState(getDefaultwish());
 
   useEffect(() => {
-    fetch("http://localhost:4000/allproduct")
+    fetch("https://kokulam-store-e-commerce-backend.onrender.com/allproduct")
       .then((res) => res.json())
       .then((data) => setAll_Product(data));
 
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/getcart", {
+      fetch("https://kokulam-store-e-commerce-backend.onrender.com/getcart", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -41,7 +41,7 @@ const ShopContextProvider = (props) => {
         .then((data) => setCartItems(data));
     }
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/getwish", {
+      fetch("https://kokulam-store-e-commerce-backend.onrender.com/getwish", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -58,7 +58,7 @@ const ShopContextProvider = (props) => {
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/addtocart", {
+      fetch("https://kokulam-store-e-commerce-backend.onrender.com/addtocart", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -74,7 +74,7 @@ const ShopContextProvider = (props) => {
   const addToWish = (itemId) => {
     setWishItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/addtowish", {
+      fetch("https://kokulam-store-e-commerce-backend.onrender.com/addtowish", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -91,7 +91,7 @@ const ShopContextProvider = (props) => {
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/removefromcart", {
+      fetch("https://kokulam-store-e-commerce-backend.onrender.com/removefromcart", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -107,7 +107,7 @@ const ShopContextProvider = (props) => {
   const removeFromWish = (itemId) => {
     setWishItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/removefromwish", {
+      fetch("https://kokulam-store-e-commerce-backend.onrender.com/removefromwish", {
         method: "POST",
         headers: {
           Accept: "application/form-data",

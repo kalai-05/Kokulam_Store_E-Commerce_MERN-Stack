@@ -33,7 +33,7 @@ const LoginSignup = () => {
   const login = async () => {
     console.log("Login Function Executed", formData);
     let responseDate;
-    await fetch("http://localhost:4000/login", {
+    await fetch("https://kokulam-store-e-commerce-backend.onrender.com/login", {
       method: "POST",
       headers: {
         Accept: "application/form-data",
@@ -60,7 +60,7 @@ const LoginSignup = () => {
     console.log("Sign Up Function Executed", formData);
 
     let responseDate;
-    await fetch("http://localhost:4000/signup", {
+    await fetch("https://kokulam-store-e-commerce-backend.onrender.com/signup", {
       method: "POST",
       headers: {
         Accept: "application/form-data",

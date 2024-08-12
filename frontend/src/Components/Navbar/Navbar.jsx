@@ -36,7 +36,7 @@ const Navbar = () => {
   const fetchUserDetails = async () => {
     try {
       // Make a GET request to the /me endpoint of your backend
-      const response = await axios.get("http://localhost:4000/me", {
+      const response = await axios.get("https://kokulam-store-e-commerce-backend.onrender.com/me", {
         headers: {
           "auth-token": `${localStorage.getItem("auth-token")}`,
         },

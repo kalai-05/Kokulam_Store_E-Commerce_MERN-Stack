@@ -14,7 +14,7 @@ app.use(cors());
 //database connection with mongodb
 
 mongoose.connect(
-  "mongodb+srv://kandypan7:kandy01K@cluster0.rcx5nls.mongodb.net/KOKULAM-NEW"
+  "mongodb+srv://kandypan7:MJZrSStId56WKsyZ@cluster0.s2wzt.mongodb.net/HARISH"
 );
 
 //API creation

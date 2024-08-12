@@ -7,7 +7,7 @@ const ManageOrders = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/getOrders");
+      const response = await axios.get("https://kokulam-store-e-commerce-backend.onrender.com/getOrders");
       setOrders(response.data.data);
       console.log(response.data.data);
     } catch (error) {
@@ -19,7 +19,7 @@ const ManageOrders = () => {
     try {
       console.log("Updating status...");
       console.log("Order ID:", orderId);
-      const response = await axios.put("http://localhost:4000/updateStatus", {
+      const response = await axios.put("https://kokulam-store-e-commerce-backend.onrender.com/updateStatus", {
         orderID: orderId,
         status: newStatus,
       });
@@ -41,7 +41,7 @@ const ManageOrders = () => {
     try {
       console.log("Deleting order...");
       const response = await axios.delete(
-        `http://localhost:4000/deleteOrder/${orderId}`
+        `https://kokulam-store-e-commerce-backend.onrender.com/deleteOrder/${orderId}`
       );
       console.log("Delete response:", response.data);
       if (response.data.success) {

@@ -42,7 +42,7 @@ const PlaceOrder = () => {
       items: orderItems,
       amount: getTotalCartAmount(),
     };
-    let res = await axios.post("http://localhost:4000/addOrder", orderData, {
+    let res = await axios.post("https://kokulam-store-e-commerce-backend.onrender.com/addOrder", orderData, {
       headers: {
         "auth-token": `${localStorage.getItem("auth-token")}`,
       },

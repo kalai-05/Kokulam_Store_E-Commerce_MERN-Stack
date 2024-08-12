@@ -31,7 +31,7 @@ const AddOffers = () => {
   const handleUpdate = async (id) => {
     const newDiscount = prompt("Enter the new discount percentage:");
     if (newDiscount !== null) {
-      const response = await fetch(`http://localhost:4000/updateOffer/${id}`, {
+      const response = await fetch(`https://kokulam-store-e-commerce-backend.onrender.com/updateOffer/${id}`, {
         method: "PUT",
         headers: {
           Accept: "application/json",
@@ -108,7 +108,7 @@ const AddOffers = () => {
   };
 
   const fetchInfo = async () => {
-    await fetch("http://localhost:4000/allproduct")
+    await fetch("https://kokulam-store-e-commerce-backend.onrender.com/allproduct")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -145,7 +145,7 @@ const AddOffers = () => {
 
     console.log(dis);
 
-    await fetch("http://localhost:4000/addOffer", {
+    await fetch("https://kokulam-store-e-commerce-backend.onrender.com/addOffer", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -173,7 +173,7 @@ const AddOffers = () => {
   };
 
   const fetchOff = async () => {
-    await fetch("http://localhost:4000/allOffer")
+    await fetch("https://kokulam-store-e-commerce-backend.onrender.com/allOffer")
       .then((res) => res.json())
       .then((data) => {
         setAllProduct(data);
@@ -185,7 +185,7 @@ const AddOffers = () => {
   }, []);
 
   const remove_product = async (id) => {
-    await fetch("http://localhost:4000/removeOffer", {
+    await fetch("https://kokulam-store-e-commerce-backend.onrender.com/removeOffer", {
       method: "POST",
       headers: {
         Accept: "application/json",

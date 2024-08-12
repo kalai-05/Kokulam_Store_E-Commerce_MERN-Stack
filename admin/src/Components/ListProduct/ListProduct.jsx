@@ -10,7 +10,7 @@ const ListProduct = () => {
   const [allproduct, setAllProduct] = useState([]);
 
   const fetchInfo = async () => {
-    await fetch("http://localhost:4000/allproduct")
+    await fetch("https://kokulam-store-e-commerce-backend.onrender.com/allproduct")
       .then((res) => res.json())
       .then((data) => {
         setAllProduct(data);
@@ -39,7 +39,7 @@ const ListProduct = () => {
   }, []);
 
   const remove_product = async (id) => {
-    await fetch("http://localhost:4000/removeproduct", {
+    await fetch("https://kokulam-store-e-commerce-backend.onrender.com/removeproduct", {
       method: "POST",
       headers: {
         Accept: "application/json",

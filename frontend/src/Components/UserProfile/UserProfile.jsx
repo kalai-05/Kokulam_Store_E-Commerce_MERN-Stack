@@ -53,7 +53,7 @@ const UserProfile = () => {
   const fetchUserDetails = async () => {
     try {
       // Make a GET request to the /me endpoint of your backend
-      const response = await axios.get("http://localhost:4000/me", {
+      const response = await axios.get("https://kokulam-store-e-commerce-backend.onrender.com/me", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -86,7 +86,7 @@ const UserProfile = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/getUserOrder", {
+      const response = await axios.get("https://kokulam-store-e-commerce-backend.onrender.com/getUserOrder", {
         headers: {
           "auth-token": `${localStorage.getItem("auth-token")}`,
         },
@@ -131,7 +131,7 @@ const UserProfile = () => {
   // const history = useHistory();
   const handleDeactivate = async () => {
     try {
-      const response = await axios.delete(`http://localhost:4000/deleteUser`, {
+      const response = await axios.delete(`https://kokulam-store-e-commerce-backend.onrender.com/deleteUser`, {
         headers: {
           "auth-token": localStorage.getItem("auth-token"),
         },

@@ -29,7 +29,7 @@ const ProductDetail = () => {
       console.log(productDetails);
 
       const updateResponse = await axios.put(
-        `http://localhost:4000/updateProduct/${id}`,
+        `https://kokulam-store-e-commerce-backend.onrender.com/updateProduct/${id}`,
         productDetails
       );
 
@@ -49,7 +49,7 @@ const ProductDetail = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/products/${id}`
+          `https://kokulam-store-e-commerce-backend.onrender.com/products/${id}`
         );
         setProductDetails(response.data);
       } catch (error) {
